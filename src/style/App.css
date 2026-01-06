@@ -16,30 +16,20 @@ body {
   font-family: var(--font-family);
 }
 
-.navbar.active {
-  background-color: var(--neutral-blue-950);
-}
+/* .navbar.active { */
+/*   background-color: var(--neutral-blue-950); */
+/* } */
+/**/
+/* .navlist.inactive { */
+/*   max-height: 0; */
+/*   overflow: hidden; */
+/*   padding: 0; */
+/* } */
 
-.navlist.inactive {
-  height: 0;
-  overflow: hidden;
-  padding: 0;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .navlist {
-    transition:
-      height 0.2s,
-      padding 0.2s;
-  }
-
-  .navbar {
-    transition: background 0.2s;
-  }
-
+@media (prefers-reduced-motion: reduce) {
+  .navlist,
+  .navbar,
   .line {
-    transition:
-      opacity 0.2s,
-      rotate 0.2s ease;
+    transition: none;
   }
 }
