@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --primary-blue-600: hsl(231, 69%, 60%);
+  --primary-red-400: hsl(0, 94%, 66%);
+
+  --neutral-grey-50: hsl(0, 0%, 97%);
+  --neutral-blue-950: hsl(229, 31%, 21%);
+
+  --font-size: 18px;
+  --font-family: "Rubik", sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+.navbar.active {
+  background-color: var(--neutral-blue-950);
+}
+
+.navlist.inactive {
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .navlist {
+    transition:
+      height 0.2s,
+      padding 0.2s;
+  }
+
+  .navbar {
+    transition: background 0.2s;
+  }
+
+  .line {
+    transition:
+      opacity 0.2s,
+      rotate 0.2s ease;
+  }
+}
