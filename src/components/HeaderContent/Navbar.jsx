@@ -55,7 +55,7 @@ const NavMenuBtn = ({ isActive, toggleIsActive }) => (
 
 const NavList = ({ isActive }) => (
   <div
-    className={`navlist transition-[max-height, padding] duration-300 ease-in-out flex flex-col justify-between p-5 overflow-hidden ${isActive ? "max-h-[1000px] h-full" : "max-h-0 p-0"} md:py-1 md:px-2 md:max-h-full md:h-full`}
+    className={`navlist transition-all duration-800 ease-in-out flex flex-col justify-between p-5 overflow-hidden ${isActive ? "max-h-[1000px] h-full" : "max-h-0 h-0 p-0"} md:py-1 md:px-2 md:max-h-full md:h-full`}
   >
     <div className="w-full md:flex md:justify-between md:items-center md:gap-8">
       <ul className="flex flex-col items-center md:flex-row md:gap-8">
@@ -109,7 +109,7 @@ const SocialLinks = ({ display }) => (
 const Navbar = ({ isActive, toggleIsActive }) => {
   return (
     <nav
-      className={`navbar transition-all duration-300 ease-in-out ${isActive ? "bg-[var(--neutral-blue-950)] bottom-0 opacity-90" : "-bottom-full"} top-0 left-0 right-0 overflow-hidden p-5 absolute z-50 md:bg-transparent md:static md:flex md:items-center md:justify-between md:max-w-[82.5rem] md:mx-auto`}
+      className={`navbar transition-all duration-300 ease-in-out ${isActive ? "bg-[var(--neutral-blue-950)] bottom-0 opacity-90" : "bottom-[calc(100%-5.75rem)]"} top-0 left-0 right-0 overflow-hidden p-5 absolute z-50 md:bg-transparent md:static md:flex md:items-center md:justify-between md:max-w-[82.5rem] md:mx-auto`}
     >
       <div className="flex justify-between">
         <NavBrand isActive={isActive} />
