@@ -10,6 +10,8 @@
 
   --font-size: 18px;
   --font-family: "Rubik", sans-serif;
+  --btn-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  --illustration-shadow: 30px 30px 0 rgba(0, 0, 0, 1);
 }
 
 body {
