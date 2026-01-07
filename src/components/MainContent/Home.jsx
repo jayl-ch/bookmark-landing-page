@@ -30,7 +30,7 @@ const CTA = () => (
 
 function Home() {
   return (
-    <section className="flex flex-col justify-center min-h-screen px-2 md:min-h-[calc(100vh-5.75rem)] md:flex-row-reverse md:items-center md:max-w-[82.5rem] md:mx-auto">
+    <section className="flex flex-col justify-center min-h-screen px-2 md:min-h-[calc(100vh-5.75rem)] md:flex-row-reverse md:items-center md:max-w-[var(--max-width)] md:mx-auto">
       <div className="">
         <HeroIllustration />
       </div>
