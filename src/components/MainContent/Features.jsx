@@ -29,7 +29,7 @@ const TabBtn = ({ setIndex, index }) => {
         >
           <button
             onClick={() => setIndex(item.index)}
-            className={`text-gray-500 text-lg py-4 ${index === item.index ? "text-gray-800 border-b-2 md:border-b-4 border-[var(--primary-red-400)]" : ""} md:w-full`}
+            className={`transition-[border, color] duration-300 cursor-pointer text-gray-500 text-lg py-4 ${index === item.index ? "text-gray-800 border-b-2 md:border-b-4 border-[var(--primary-red-400)]" : ""} md:w-full`}
           >
             {item.tab}
           </button>
@@ -65,8 +65,15 @@ const TabCards = ({ index }) => {
   ];
 
   return (
-    <>
-      <img src={tabsContent[index].img} alt="" />
+    <div
+      key={tabsContent[index].id}
+      className="animate-ease flex flex-col justify-between md:flex-row md:items-center py-10 md:gap-10"
+    >
+      <img
+        className="md:w-[clamp(22rem,40vw,40rem)] mx-auto"
+        src={tabsContent[index].img}
+        alt=""
+      />
       <div className="py-8 md:px-8">
         <h2 className="text-2xl text-center font-semibold md:text-4xl md:text-left">
           {tabsContent[index].title}
@@ -76,7 +83,7 @@ const TabCards = ({ index }) => {
         </p>
         <MoreInfoBtn />
       </div>
-    </>
+    </div>
   );
 };
 
@@ -88,14 +95,12 @@ const MoreInfoBtn = () => (
 
 function Features({ setIndex, index }) {
   return (
-    <section className="px-6 md:max-w-[var(--max-width)] mx-auto">
+    <section className="mt-10 px-6 md:max-w-[var(--max-width)] mx-auto">
       <div className="max-w-120 mx-auto">
         <FeaturesHeading />
       </div>
       <TabBtn setIndex={setIndex} index={index} />
-      <div className="flex flex-col justify-between md:flex-row md:items-center py-10 md:gap-10">
-        <TabCards index={index} />
-      </div>
+      <TabCards index={index} />
     </section>
   );
 }

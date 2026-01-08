@@ -1,5 +1,5 @@
-@import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import "tailwindcss";
 
 :root {
   --primary-blue-600: hsl(231, 69%, 60%);
@@ -18,6 +18,19 @@
 
 body {
   font-family: var(--font-family);
+}
+
+@theme {
+  --animate-ease: appear 0.3s ease-out;
+
+  @keyframes appear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
