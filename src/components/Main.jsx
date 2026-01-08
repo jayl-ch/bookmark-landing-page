@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import Home from "./MainContent/Home";
 import Features from "./MainContent/Features";
+import Extensions from "./MainContent/Extensions";
 
 function Main() {
   // tab feature
@@ -11,6 +12,7 @@ function Main() {
     <main>
       <Home />
       <Features setIndex={setIndex} index={index} />
+      <Extensions />
     </main>
   );
 }
