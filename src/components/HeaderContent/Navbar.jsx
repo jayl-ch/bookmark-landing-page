@@ -2,7 +2,7 @@ import Login from "./Login";
 
 const NavBrand = ({ isActive }) => (
   <div>
-    <div>
+    <a href="">
       <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
         <g fill="none" fillRule="evenodd">
           <path
@@ -24,7 +24,7 @@ const NavBrand = ({ isActive }) => (
           </g>
         </g>
       </svg>
-    </div>
+    </a>
   </div>
 );
 
