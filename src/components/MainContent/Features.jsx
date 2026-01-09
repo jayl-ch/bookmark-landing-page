@@ -1,17 +1,19 @@
 import tab1 from "../../assets/images/illustration-features-tab-1.svg";
 import tab2 from "../../assets/images/illustration-features-tab-2.svg";
 import tab3 from "../../assets/images/illustration-features-tab-3.svg";
+import HeadingTitle from "../SectionHeading/Heading";
 
-const FeaturesHeading = () => (
-  <>
-    <h2 className="text-center font-semibold text-2xl md:text-3xl">Features</h2>
-    <p className="text-center my-4 text-gray-500">
-      Our aim is to make it quick and easy for you to access your favourite
-      websites. Your bookmarks sync between your devices so you can access them
-      on the go.
-    </p>
-  </>
-);
+const FeaturesHeading = () => {
+  const title = "Features";
+  const paragraph =
+    "Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.";
+
+  return (
+    <>
+      <HeadingTitle title={title} paragraph={paragraph} />
+    </>
+  );
+};
 
 const TabBtn = ({ setIndex, index }) => {
   const tabs = [
@@ -81,14 +83,16 @@ const TabCards = ({ index }) => {
         <p className="text-center text-gray-500 py-4 md:text-left">
           {tabsContent[index].description}
         </p>
-        <MoreInfoBtn />
+        <MoreInfoBtn display="hidden md:block" />
       </div>
     </div>
   );
 };
 
-const MoreInfoBtn = () => (
-  <button className="px-6 py-3 shadow-[var(--btn-box-shadow)] bg-[var(--primary-blue-600)] rounded text-[var(--neutral-grey-50)] font-semibold hidden md:block">
+export const MoreInfoBtn = ({ display }) => (
+  <button
+    className={`px-6 py-3 shadow-[var(--btn-box-shadow)] bg-[var(--primary-blue-600)] rounded text-[var(--neutral-grey-50)] font-semibold ${display}`}
+  >
     More Info
   </button>
 );

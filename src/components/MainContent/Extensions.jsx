@@ -1,20 +1,21 @@
 import chrome from "../../assets/images/logo-chrome.svg";
 import firefox from "../../assets/images/logo-firefox.svg";
 import opera from "../../assets/images/logo-opera.svg";
-import bgdots from "../../assets/images/bg-dots.svg";
+// import bgdots from "../../assets/images/bg-dots.svg";
 import { BtnStyle } from "./Home";
+import HeadingTitle from "../SectionHeading/Heading";
 
-const Heading = () => (
-  <>
-    <h2 className="text-2xl font-semibold text-center">
-      Download the extension
-    </h2>
-    <p className="text-center text-gray-500">
-      We've got more browsers in the pipeline. Please do let us know if you've
-      got a favourite you'd like us to prioritize.
-    </p>
-  </>
-);
+const Heading = () => {
+  const title = "Download the extension";
+  const paragraph =
+    "We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like us to prioritize.";
+
+  return (
+    <>
+      <HeadingTitle title={title} paragraph={paragraph} />
+    </>
+  );
+};
 
 const CardBtn = () => (
   <button
@@ -36,7 +37,7 @@ const Cards = () => {
       {cardContent.map(({ id, img, title, version }) => (
         <div
           key={id}
-          className={`shadow-[var(--btn-box-shadow)] p-8 rounded-xl flex flex-col gap-5 max-w-110 w-full mx-auto md:nth-[2]:mt-20 md:nth-[3]:mt-40`}
+          className={`shadow-[var(--btn-box-shadow)] p-8 rounded-xl flex flex-col gap-5 max-w-100 w-full mx-auto md:nth-[2]:mt-20 md:nth-[3]:mt-40`}
         >
           <img src={img} alt="" className="mx-auto" />
           <div className="mx-auto">
