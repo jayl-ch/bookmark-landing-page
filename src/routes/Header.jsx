@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Navbar from "./HeaderContent/Navbar";
+import Navbar from "../components/HeaderContent/Navbar";
 
 function Header() {
   // navmenu
