@@ -51,27 +51,31 @@ const NavMenuBtn = ({ isActive, toggleIsActive }) => (
   </button>
 );
 
-const NavList = ({ isActive }) => (
+const Lists = () => (
+  <ul className="flex flex-col items-center md:flex-row md:gap-8">
+    {["features", "pricing", "contact"].map((item) => (
+      <li
+        className="w-full text-center border-b md:border-none border-gray-500 py-6 md:py-0"
+        key={item}
+      >
+        <a
+          href=""
+          className="text-[var(--neutral-grey-50)] md:text-[var(--neutral-blue-950)] text-xl md:text-sm uppercase tracking-widest"
+        >
+          {item}
+        </a>
+      </li>
+    ))}
+  </ul>
+);
+
+const NavList = ({ isActive, hasLogin = false }) => (
   <div
     className={`navlist transition-all duration-800 ease-in-out flex flex-col justify-between p-5 overflow-hidden ${isActive ? "max-h-[1000px] h-full" : "max-h-0 h-0 p-0"} md:py-1 md:px-2 md:max-h-full md:h-full`}
   >
     <div className="w-full md:flex md:justify-between md:items-center md:gap-8">
-      <ul className="flex flex-col items-center md:flex-row md:gap-8">
-        {["features", "pricing", "contact"].map((item) => (
-          <li
-            className="w-full text-center border-b md:border-none border-gray-500 py-6 md:py-0"
-            key={item}
-          >
-            <a
-              href=""
-              className="text-[var(--neutral-grey-50)] md:text-[var(--neutral-blue-950)] text-xl md:text-sm uppercase tracking-widest"
-            >
-              {item}
-            </a>
-          </li>
-        ))}
-      </ul>
-      <Login />
+      <Lists />
+      <Login isVisible={hasLogin} />
     </div>
     <SocialLinks display="md:hidden" />
   </div>
@@ -113,9 +117,10 @@ const Navbar = ({ isActive, toggleIsActive }) => {
         <NavBrand isActive={isActive} />
         <NavMenuBtn isActive={isActive} toggleIsActive={toggleIsActive} />
       </div>
-      <NavList isActive={isActive} />
+      <NavList isActive={isActive} hasLogin={true} />
     </nav>
   );
 };
 
 export default Navbar;
+export { NavBrand, SocialLinks };

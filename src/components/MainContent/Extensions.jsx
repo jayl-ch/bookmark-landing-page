@@ -37,7 +37,7 @@ const Cards = () => {
       {cardContent.map(({ id, img, title, version }) => (
         <div
           key={id}
-          className={`shadow-[var(--btn-box-shadow)] p-8 rounded-xl flex flex-col gap-5 max-w-100 w-full mx-auto md:nth-[2]:mt-20 md:nth-[3]:mt-40`}
+          className={`shadow-[var(--btn-box-shadow)] p-8 rounded-xl flex flex-col gap-5 max-w-80 w-full mx-auto md:nth-[2]:mt-20 md:nth-[3]:mt-40`}
         >
           <img src={img} alt="" className="mx-auto" />
           <div className="mx-auto">
@@ -59,7 +59,7 @@ function Extensions() {
       <div>
         <Heading />
       </div>
-      <div className="flex flex-col justify-between gap-10 md:flex-row md:items-center">
+      <div className="flex flex-col justify-between gap-5 md:flex-row md:items-center">
         <Cards />
       </div>
     </section>

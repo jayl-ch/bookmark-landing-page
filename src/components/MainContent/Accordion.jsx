@@ -42,16 +42,17 @@ const Question = ({ activeIndex, setActiveIndex }) => {
       {faq.map(({ question, ans, index }) => (
         <div key={index} className="border-b-gray-400 border-b py-4">
           <button
+            type="button"
             onClick={() =>
               setActiveIndex((prev) => (prev === index ? null : index))
             }
-            className="flex justify-between w-full"
+            className="flex items-center justify-between w-full cursor-pointer"
           >
             <p className="text-[var(--neutral-blue-950)] font-semibold">
               {question}
             </p>
             <svg
-              className={`transition-[rotate,color] ${activeIndex === index ? "rotate-180 text-[var(--primary-red-400)]" : "rotate-0 text-[var(--primary-blue-600)]"}`}
+              className={`transition-[rotate,color] duration-300 ${activeIndex === index ? "rotate-180 text-[var(--primary-red-400)]" : "rotate-0 text-[var(--primary-blue-600)]"}`}
               xmlns="http://www.w3.org/2000/svg"
               width="18"
               height="12"
