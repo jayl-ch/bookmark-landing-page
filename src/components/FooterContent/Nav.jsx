@@ -18,7 +18,7 @@ const Lists = () => (
 function Nav() {
   return (
     <nav className="flex flex-col items-center gap-8 max-w-[var(--max-width)] mx-auto py-10 md:flex-row md:justify-between">
-      <div className="flex flex-col items-center gap-15 md:flex-row">
+      <div className="flex flex-col items-center gap-10 md:gap-15 md:flex-row">
         <a href="">
           <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" fillRule="evenodd">
