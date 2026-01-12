@@ -31,7 +31,7 @@ const TabBtn = ({ setIndex, index }) => {
         >
           <button
             onClick={() => setIndex(item.index)}
-            className={`transition-[border, color] duration-300 cursor-pointer text-gray-500 text-lg py-4 ${index === item.index ? "text-gray-800 border-b-2 md:border-b-4 border-[var(--primary-red-400)]" : ""} md:w-full`}
+            className={`transition-[border, color] duration-300 cursor-pointer text-gray-500 text-lg py-4 hover:text-[var(--primary-red-400)] ${index === item.index ? "text-gray-800 border-b-2 md:border-b-4 border-[var(--primary-red-400)]" : ""} md:w-full`}
           >
             {item.tab}
           </button>

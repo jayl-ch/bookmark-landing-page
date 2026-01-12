@@ -18,12 +18,12 @@ const Cta = () => (
     </p>
     <div className="flex gap-5 w-full justify-center md:justify-start">
       <button
-        className={`text-[var(--neutral-grey-50)] bg-[var(--primary-blue-600)] ${BtnStyle}`}
+        className={`text-[var(--neutral-grey-50)] bg-[var(--primary-blue-600)] hover:bg-transparent hover:text-[var(--primary-blue-600)] hover:outline-[var(--primary-blue-600)] hover:outline-2 cursor-pointer ${BtnStyle}`}
       >
         Get it on Chrome
       </button>
       <button
-        className={`text-[var(--neutral-blue-950)] bg-[var(--neutral-grey-50)] ${BtnStyle}`}
+        className={`text-[var(--neutral-blue-950)] bg-[var(--neutral-grey-50)] hover:outline-[var(--primary-blue-950)] hover:outline-2 cursor-pointer ${BtnStyle}`}
       >
         Get it on Firefox
       </button>

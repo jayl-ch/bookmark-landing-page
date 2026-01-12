@@ -46,9 +46,9 @@ const Question = ({ activeIndex, setActiveIndex }) => {
             onClick={() =>
               setActiveIndex((prev) => (prev === index ? null : index))
             }
-            className="flex items-center justify-between w-full cursor-pointer"
+            className="flex items-center justify-between w-full cursor-pointer group"
           >
-            <p className="text-[var(--neutral-blue-950)] font-semibold">
+            <p className="text-[var(--neutral-blue-950)] font-semibold group-hover:text-[var(--primary-red-400)]">
               {question}
             </p>
             <svg

@@ -1,10 +1,13 @@
 import { NavBrand, SocialLinks } from "../HeaderContent/Navbar";
 
 const Lists = () => (
-  <ul className="text-[var(--neutral-grey-50)] flex flex-col gap-5 text-lg text-center md:flex-row">
+  <ul className="text-[var(--neutral-grey-50)] flex flex-col gap-5 text-sm text-center md:flex-row">
     {["features", "pricing", "contact"].map((item) => (
       <li key={item}>
-        <a className="uppercase tracking-widest" href="">
+        <a
+          className="uppercase tracking-widest hover:text-[var(--primary-red-400)]"
+          href=""
+        >
           {item}
         </a>
       </li>
@@ -15,7 +18,7 @@ const Lists = () => (
 function Nav() {
   return (
     <nav className="flex flex-col items-center gap-8 max-w-[var(--max-width)] mx-auto py-10 md:flex-row md:justify-between">
-      <div className="flex flex-col items-center gap-10 md:flex-row">
+      <div className="flex flex-col items-center gap-15 md:flex-row">
         <a href="">
           <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" fillRule="evenodd">
