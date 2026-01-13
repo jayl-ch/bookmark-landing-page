@@ -66,6 +66,12 @@ const TabCards = ({ index }) => {
     },
   ];
 
+  // prevents the img to loads again when refreshed
+  tabsContent.forEach(({ src }) => {
+    const img = new Image();
+    img.src = src;
+  });
+
   return (
     <div
       key={tabsContent[index].id}
