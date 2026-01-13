@@ -37,7 +37,7 @@ function Home() {
       <div className="">
         <HeroIllustration />
       </div>
-      <div className="animate-side flex flex-col gap-5 items-center p-6 md:items-start">
+      <div className="flex flex-col gap-5 items-center p-6 md:items-start">
         <Cta />
       </div>
     </section>
