@@ -16,10 +16,10 @@ const ContactHeading = () => (
   </>
 );
 
-const Form = ({ isValid, setIsValid }) => (
+const Form = ({ isValid, setIsValid, setIsFormSubmitted }) => (
   <form
     className="flex flex-col gap-4 md:flex-row md:justify-between md:items-start"
-    onSubmit={(e) => submitForm(e, isValid, setIsValid)}
+    onSubmit={(e) => submitForm(e, isValid, setIsValid, setIsFormSubmitted)}
   >
     <div className="relative grow-1 md:self-stretch rounded bg-[var(--primary-red-400)]">
       <input
@@ -50,14 +50,18 @@ const Form = ({ isValid, setIsValid }) => (
   </form>
 );
 
-function Contact({ isValid, setIsValid }) {
+function Contact({ isValid, setIsValid, setIsFormSubmitted }) {
   return (
     <section className="bg-[var(--primary-blue-600)]">
       <div className=" px-6 py-12 max-w-130 flex flex-col gap-10 mx-auto mt-10">
         <div>
           <ContactHeading />
         </div>
-        <Form isValid={isValid} setIsValid={setIsValid} />
+        <Form
+          isValid={isValid}
+          setIsValid={setIsValid}
+          setIsFormSubmitted={setIsFormSubmitted}
+        />
       </div>
     </section>
   );

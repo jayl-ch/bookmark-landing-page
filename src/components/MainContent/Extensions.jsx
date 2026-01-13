@@ -37,7 +37,7 @@ const Cards = () => {
       {cardContent.map(({ id, img, title, version }) => (
         <div
           key={id}
-          className={`shadow-[var(--btn-box-shadow)] p-8 rounded-xl flex flex-col gap-5 max-w-80 w-full md:nth-[2]:mt-20 md:nth-[3]:mt-40`}
+          className={`shadow-[var(--btn-box-shadow)] hover:shadow-2xl transition-shadow duration-300 p-8 rounded-xl flex flex-col gap-5 max-w-80 w-full md:nth-[2]:mt-20 md:nth-[3]:mt-40`}
         >
           <img src={img} alt="" className="mx-auto" />
           <div className="mx-auto">

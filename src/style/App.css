@@ -22,13 +22,37 @@ body {
 
 @theme {
   --animate-ease: appear 0.3s ease-out;
+  --animate-side: side 0.8s ease-out;
+  --animate-progress: timer 5000ms linear;
 
   @keyframes appear {
     from {
+      transform: translateY(1rem);
       opacity: 0;
     }
     to {
+      transform: translateY(0);
       opacity: 1;
+    }
+  }
+
+  @keyframes side {
+    from {
+      transform: translateX(-1rem);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes timer {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0%;
     }
   }
 }
